@@ -1,0 +1,394 @@
+/*
+			$color-white:#fff;
+			$color-whiteblue:#d0fcff;
+
+			$color-lightest:#49affa;
+			$color-light:#4295d7;
+			
+			$color-normal:#276a9c;
+			
+			$color-normal-dark:#21547b;			
+			$color-dark:#102c41;
+			
+			$color-gray:#96a4ae;  // mss opacity vanuit white
+
+		*/
+		@font-face {
+			font-family: "Bourgeois W00 Light";
+			src: url("../fonts/99ca060c4577f99d9b5e6dbf0fe1971d.eot"); /* IE9*/
+			src: url("../fonts/99ca060c4577f99d9b5e6dbf0fe1971d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+			url("../fonts/99ca060c4577f99d9b5e6dbf0fe1971d.woff2") format("woff2"), /* chrome?firefox */
+			url("../fonts/99ca060c4577f99d9b5e6dbf0fe1971d.woff") format("woff"), /* chrome?firefox */
+			url("../fonts/99ca060c4577f99d9b5e6dbf0fe1971d.ttf") format("truetype"), /* chrome?firefox?opera?Safari, Android, iOS 4.2+*/
+			url("../fonts/99ca060c4577f99d9b5e6dbf0fe1971d.svg#Bourgeois W00 Light") format("svg"); /* iOS 4.1- */
+		}
+		@font-face {
+			font-family: "Bourgeois W00 Medium";
+			src: url("../fonts/6dbb2ef49faa5474e0d891864e3a6c2b.eot"); /* IE9*/
+			src: url("../fonts/6dbb2ef49faa5474e0d891864e3a6c2b.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+			url("../fonts/6dbb2ef49faa5474e0d891864e3a6c2b.woff2") format("woff2"), /* chrome?firefox */
+			url("../fonts/6dbb2ef49faa5474e0d891864e3a6c2b.woff") format("woff"), /* chrome?firefox */
+			url("../fonts/6dbb2ef49faa5474e0d891864e3a6c2b.ttf") format("truetype"), /* chrome?firefox?opera?Safari, Android, iOS 4.2+*/
+			url("../fonts/6dbb2ef49faa5474e0d891864e3a6c2b.svg#Bourgeois W00 Medium") format("svg"); /* iOS 4.1- */
+		}
+		@font-face {
+		  font-family: 'icomoon';
+		  src:  url('../fonts/icomoon.eot?4rf3um');
+		  src:  url('../fonts/icomoon.eot?4rf3um#iefix') format('embedded-opentype'),
+		    url('../fonts/icomoon.ttf?4rf3um') format('truetype'),
+		    url('../fonts/icomoon.woff?4rf3um') format('woff'),
+		    url('../fonts/icomoon.svg?4rf3um#icomoon') format('svg');
+		  font-weight: normal;
+		  font-style: normal;
+		}
+
+		[class^="icon-"], [class*=" icon-"] {
+		  /* use !important to prevent issues with browser extensions that change fonts */
+		  font-family: 'icomoon' !important;
+		  speak: none;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-variant: normal;
+		  text-transform: none;
+		  line-height: 1;
+
+		  /* Better Font Rendering =========== */
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		}
+
+		.icon-layout:before {
+		  content: "\e004";
+		}
+
+
+		html, body {
+			height: 100%;
+		}
+		body {
+			font-family:"Bourgeois W00 Light" !important;
+		    font-size:16px;
+		    font-style:normal;
+		    line-height: normal;
+		    color:#fff;
+
+		    -webkit-font-smoothing: antialiased;
+		    -webkit-text-stroke-width: 0.1px;
+		    
+		    -moz-osx-font-smoothing: grayscale;
+			background: linear-gradient(rgba(12,34,51,0.75),rgba(12,34,51,0.75)), url('../images/sdr1-lichttoren-bw_.jpg');
+			background-size: cover;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family:"Bourgeois W00 Light" !important;		    
+		}
+		h1, h2 {
+			color:#d0fcff;
+			font-weight: 300;
+			margin:0 0 16px;
+			display: inline-block;
+			text-transform: uppercase;
+			background-image:radial-gradient(rgba(51,165,255,0.6) 15%, rgba(0,0,0,0) 50%);
+			-webkit-animation: neon 1.5s ease-in-out infinite alternate;
+			-moz-animation: neon 1.5s ease-in-out infinite alternate;
+			animation: neon 1.5s ease-in-out infinite alternate;
+		}
+		h1 {
+			font-size:3em;
+		}
+		h3 {
+			font-size:2.5em;
+			font-weight:300;
+			margin:8px 0;
+			line-height: 1;
+		}
+		p, span {
+			font-family: "nimbus-sans", Arial;
+			font-weight: 300;
+			font-style: normal;
+		}
+		dl,ol,ul {
+			line-height: ;
+		}
+		ul {
+			list-style: none;
+			line-height: 2;
+		}
+		ul li {
+			font-size:18px;
+		}
+		span.dot {
+			border:1px solid white;
+			border-radius: 50%;
+			padding: 0 11px;
+			margin:0 2px;
+		}
+		span.checked {
+			background-color:rgba(208,253,255,0.5);
+		}
+		ul.brands {
+			margin:0;
+			padding:0;
+		}
+		ul.brands li {
+			float:left;
+			width:35px;
+			border-radius:5px;
+			margin:6px;
+			text-align: center;
+			color: transparent;
+			cursor: pointer;
+			background:linear-gradient(rgba(39,105,156,0.5), rgba(22,57,87,0.5));
+		}
+		ul.brands li i {
+			padding:3px;		
+			background-color:rgba(0,0,0,.75);
+			-webkit-text-fill-color: transparent;
+  			-webkit-background-clip: text;	
+		}
+		ul.brands li:hover {	
+			background:#fff;
+			color: rgba(0,96,143,0.85);
+			/*box-shadow: 0 5px 15px rgba(208, 252, 255, .4);*/
+			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+		}
+		.box {
+			padding: 1.2em;
+		}
+		.highlight {
+			border: 2px solid #4295d7;
+			border-radius: 10px;
+			background: linear-gradient(rgba(39,106,156,0.55) 15%, rgba(12,34,51,0.75) 50%, rgba(7,20,32,0.75) 75%);
+			position: relative;
+			-moz-box-shadow:    0 0 8px #000;
+			-webkit-box-shadow: 0 0 8px #000;
+			box-shadow:         0 0 8px #000;			
+		}
+		
+		button {
+			color:#fff;
+			font-family:"Bourgeois W00 Light";
+			font-weight: 300;
+			font-size: 1.35em;
+			padding:6px 12px;
+			background:linear-gradient(#276a9c, #163a57);
+			border:2px solid #21547b;
+			border-radius: 6px;
+			text-transform: uppercase;
+			transform: skew(-20deg);
+			-webkit-transform:skew(-20deg);
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			position: absolute;
+			left:1.5em;
+			bottom: 1em;
+			outline: none;
+			letter-spacing: 1px;
+		}
+		button:hover {	
+			font-weight: 600;
+			background:#fff;
+			color: rgba(0,96,143,0.85);
+			border:2px solid #fff;
+			/*box-shadow: 0 5px 15px rgba(208, 252, 255, .4);*/
+			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+			text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF;
+		}
+		button span {
+			font-family:"Bourgeois W00 Medium";
+			display: inline-block;
+			transform: skew(20deg) !important;
+			-webkit-transform:skew(20deg) !important;
+		}
+		span.header--sub {
+			margin-left: 12px;
+			font-size: 14px;
+		}
+		.items {
+			overflow:hidden;
+			height:9em;
+			position:relative;
+		}
+		.items	ul {
+			float:left;
+			width:562px;
+			padding: 0;
+			list-style: none;			
+		}
+		.items	ul li {
+			width:136px;
+			height:5em;
+			margin:0 5px;
+			
+			font-size:1.5em;
+			text-align:center;
+			border-radius: 10px;
+			
+			display: inline-block;
+			border:2px solid transparent;
+			
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.items	ul li:first-child {
+			margin:0 5px 0 0;
+		}
+		.items	ul li:nth-child(3) {
+			margin:0 0 0 5px;
+		}
+		.items	ul li:last-child {
+			margin:0 0 0 5px;
+		}
+		.items	ul li:hover {
+			box-shadow: inset 0 0 25px rgba(233, 248, 255, 0.65);
+			border:2px solid #fff;
+		}
+		.items	ul li i {
+			font-size: 2em;
+		}
+		.pager {
+			width:38px;	
+			float:right;
+			min-height:100%;
+			position:relative;
+		}
+		.pager button {
+			left:0;
+			bottom:initial;
+			position:absolute;
+			transform: skew(0deg);
+			-webkit-transform:skew(0deg);
+			transform:rotate(-90deg);
+	
+		}
+		.pager button:before {
+			content: ">";
+		}
+		.pager .pager--up {
+			top:0;
+		}
+		.pager .pager--down {
+			top:110px;
+			transform:rotate(90deg);
+		}
+		.top-bar {
+			margin-bottom:2em;
+		}
+		.top-bar, .top-bar ul {
+			background: none;
+		}
+		.profile .image {
+			float:left;
+			padding: 3em;
+			display: inline-block;
+			border-width:3px;
+			border-style: solid;
+			border-color: #63f7ff;
+			border-radius: 6px;
+			
+			background: url(https://www.estate.nl/images/default-source/Estaters/roelheesterbeek-thumb.jpg?sfvrsn=2);
+			
+			background-size:cover;
+			background-position: center center;
+		}
+		.profile .name, .profile .progression {
+			float:left;
+			margin-left:16px;
+			display:inline-block;
+		}
+		
+		.progression {
+			display:block;
+			position:relative;
+		}
+		.progression .level {
+			width:60px;
+			height:45px;
+			overflow:hidden;
+			letter-spacing:-4px;
+			text-align:center;
+			
+			color:rgb(132,83,40);
+			font-size:2.5em;
+			font-weight: 600;
+			padding:4px 8px;
+			display: inline-block;
+			text-transform: uppercase;
+			border-radius:50%;
+			background-image:radial-gradient(rgb(255, 255, 255) 65%, rgb(255,227,94) 35%);
+			box-shadow: 0 0 25px rgba(255,200,70, 0.75);
+		}
+		.progression .counter {
+			-webkit-animation: countLevel 2s ease-out;
+			-webkit-animation-fill-mode:forwards;
+		/*	-webkit-animation-timing-function: steps(26);*/
+		}
+		.progression .level span {
+			width:100%;
+			display:block;
+		}
+		.progression .level span:nth-child(1), .progression .level span:nth-child(2),
+		.progression .level span:nth-child(3), .progression .level span:nth-child(4),
+		.progression .level span:nth-child(5), .progression .level span:nth-child(6),
+		.progression .level span:nth-child(7), .progression .level span:nth-child(8),
+		.progression .level span:nth-child(9)
+		{
+			letter-spacing:0;
+		}
+		.progression .steps {
+			list-style:none;
+			margin:0;
+			position:absolute;
+			width:300px;
+			left:50px;
+			bottom:10px;
+			z-index:-1;
+		}
+		.progression .steps li {
+			float:left;
+			width:70px;
+			height:14px;
+			padding:1px 0;
+			margin:0 4px 0 0;
+			border-radius: 2px;
+			border:2px solid rgba(255,200,70,0);
+			transform: skew(-20deg);
+			
+			background:linear-gradient(to left, rgba(190,120,10,0.65) 50%, rgb(255,200,70) 50%);
+			background-size:220% 100%;
+			background-position: 97% bottom;
+			
+			transition:all 0.5s linear;
+		}
+		.progression .steps li:first-child {
+			transition:all 0.5s cubic-bezier(0.4, 0, 1, 1);
+		}
+		.progression .steps li.complete:last-child {
+			/*background-position:40% bottom;*/
+			transition:all 0.7s cubic-bezier(0, 0, 0.2, 1)
+		}
+		.progression .steps li.complete {
+			background-position:left bottom;
+			border:2px solid rgba(255,200,70,1);
+			box-shadow: 0 0 25px rgba(255,200,70, 0.75);
+		}
+		
+
+		@-webkit-keyframes neon {
+		  from {
+		    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+		  }
+		  to {
+		    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+		  }
+		}
+		@-webkit-keyframes countLevel {
+			0% {
+				margin-top:0;
+			}
+			100% {
+				margin-top:-1556px;
+			}
+		}

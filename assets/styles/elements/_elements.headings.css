@@ -1,0 +1,23 @@
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family:"Bourgeois W00 Light" !important;
+		}
+		h1, h2 {
+			color:#d0fcff;
+			font-weight: 300;
+			margin:0 0 16px;
+			display: inline-block;
+			text-transform: uppercase;
+			background-image:radial-gradient(rgba(51,165,255,0.6) 15%, rgba(0,0,0,0) 50%);
+			-webkit-animation: neon 1.5s ease-in-out infinite alternate;
+			-moz-animation: neon 1.5s ease-in-out infinite alternate;
+			animation: neon 1.5s ease-in-out infinite alternate;
+		}
+		h1 {
+			font-size:3em;
+		}
+		h3 {
+			font-size:2.5em;
+			font-weight:300;
+			margin:8px 0;
+		}
