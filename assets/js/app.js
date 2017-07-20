@@ -1,3 +1,65 @@
+var url = "/steam/json.php?accountid=76561198015555807";
+
+$.ajax({
+	url: url,
+	dataType: "json",
+	success: function(data){
+		console.log(data);
+	},
+	error: function(req,text,error){
+		console.log(text);
+		console.log(error);
+		console.log("DIDN'T WORK!")
+	}
+});
+/*
+$.get(url,function(error, json, dataType){
+  console.log(json);
+});
+
+var jqxhr = $.get( "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=B56030D1092EBB1AF70E6D389FD6CBE7&steamid=76561198015555807&callback=?", function() {
+  alert( "success" );
+})
+  .done(function() {
+    alert( "second success" );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
+
+function logResults(json){
+  console.log(json);
+}
+
+$.ajax({
+  url: "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=B56030D1092EBB1AF70E6D389FD6CBE7&steamid=76561198015555807&format=json",
+  dataType: "jsonp",
+  jsonpCallback: "logResults"
+});
+*/
+// Setup an event listener to make an API call once auth is complete
+    function onLinkedInLoad() {
+        IN.Event.on(IN, "auth", getProfileData);
+    }
+
+    // Handle the successful return from the API call
+    function onSuccess(data) {
+        // Pre-populate your form fields here once you know the call 
+        // came back successfully
+    }
+
+    // Handle an error response from the API call
+    function onError(error) {
+        console.log(error);
+    }
+
+    // Use the API call wrapper to request the member's basic profile data
+    function getProfileData() {
+        IN.API.Raw("/people/~:(firstName,lastName,emailAddress)").result(onSuccess).error(onError);
+    }
 
 		// leeftijd = today 
 		// progress = year today - birthyear
